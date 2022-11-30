@@ -1,9 +1,16 @@
 {
   "name": "crc-flow",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "keywords": [
+    "flow",
+    "react",
+    "g6",
+    "typescript",
+    "GGEditor"
+  ],
   "repository": "https://github.com/fanefanes/crc-flow.git",
   "scripts": {
     "example": "webpack-dev-server --config webpack.example.config.js",
