@@ -1,0 +1,22 @@
+.graph {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.itemPanel {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e8e8e8;
+  .item {
+    margin-bottom: 24px;
+    user-select: none;
+    img {
+      display: block;
+    }
+  }
+}
