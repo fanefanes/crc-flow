@@ -13,10 +13,7 @@
   ],
   "repository": "https://github.com/fanefanes/crc-flow.git",
   "scripts": {
-    "example": "webpack-dev-server --config webpack.example.config.js",
-    "build": "webpack && tscpaths -p ./tsconfig.cjs.json -s ./dist",
-    "sb": "start-storybook -p 6006",
-    "build-sb": "build-storybook"
+    "build": "webpack && tscpaths -p ./tsconfig.cjs.json -s ./dist"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -31,46 +28,17 @@
     "package.json"
   ],
   "devDependencies": {
-    "react-dev-utils": "^12.0.1",
-    "react-router-dom": "^6.3.0",
-    "remark-gfm": "^3.0.1",
-    "react-markdown": "^8.0.3",
-    "@ant-design/icons": "^4.7.0",
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-runtime": "^7.16.4",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
-    "@babel/preset-typescript": "^7.16.0",
-    "@cvte-ai/eslint-config-react": "^1.0.5",
-    "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-essentials": "^6.5.10",
-    "@storybook/addon-interactions": "^6.5.10",
-    "@storybook/addon-links": "^6.5.10",
-    "@storybook/builder-webpack5": "^6.5.10",
-    "@storybook/manager-webpack5": "^6.5.10",
-    "@storybook/react": "^6.5.10",
-    "@storybook/testing-library": "^0.0.13",
+
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "@types/lodash": "^4.14.182",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
-    "antd": "^4.21.5",
-    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.1",
-    "friendly-errors-webpack-plugin": "^1.7.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.53.0",
-    "sass-loader": "^13.0.2",
     "ts-loader": "^9.3.0",
     "tscpaths": "^0.0.9",
     "typescript": "^4.5.3",
     "webpack": "^5.73.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.3"
+    "webpack-cli": "^4.9.2"
   }
 }
