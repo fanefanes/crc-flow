@@ -48,10 +48,13 @@ export default function ItemPopover({
   const mouseEnterTimeoutIDRef = useRef<number>();
   const mouseLeaveTimeoutIDRef = useRef<number>();
 
+  const contentHover = useRef<boolean>(false)
+
   const showItemPopover = useCallback((item: Item) => {
     if (!graph) return;
 
     global.plugin.itemPopover.state = 'show';
+    contentHover.current = false
 
     const {
       minX, minY, maxX, maxY, centerX = 0, centerY = 0,
@@ -72,7 +75,20 @@ export default function ItemPopover({
 
     setContent({
       visible: true,
-      content: renderContent(item, position),
+      content: (
+        <div
+          onMouseEnter={(e) => {
+            contentHover.current = true
+            e.stopPropagation()
+          }}
+          onMouseLeave={(e) => {
+            contentHover.current = false
+            e.stopPropagation()
+          }}
+        >
+          {renderContent(item, position)}
+        </div>
+      )
     });
   }, [global, graph])
 
@@ -94,6 +110,7 @@ export default function ItemPopover({
       mouseEnterTimeoutIDRef.current = delay(showItemPopover, showDelay, item);
     };
     const leaveHandler = () => {
+      if (contentHover.current) return
       clearTimeout(mouseEnterTimeoutIDRef.current);
       mouseLeaveTimeoutIDRef.current = delay(hideItemPopover, showDelay);
     };
