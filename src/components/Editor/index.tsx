@@ -13,6 +13,7 @@ interface EditorProps {
   className?: string;
   [EditorEvent.onBeforeExecuteCommand]?: (e: CommandEvent) => void;
   [EditorEvent.onAfterExecuteCommand]?: (e: CommandEvent) => void;
+  children?: React.ReactNode
 }
 
 const Editor: React.FC<EditorProps> = ({
